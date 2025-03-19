@@ -1,6 +1,9 @@
-export default function Home() {
+export default function main() {
     return (
-        <main>
-        </main>
+        <div>
+            <h1>
+                Hier startet die Website
+            </h1>
+        </div>
     )
 }
