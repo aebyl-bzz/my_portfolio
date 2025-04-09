@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Navbar() {
     return (
-        <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
+        <nav className="flex justify-between items-center p-4 bg-purple-900 text-white">
             <Link href="/" className="text-lg hover:underline">Lucius Aeby</Link>
 
             <div className="ml-auto flex gap-4">
