@@ -3,20 +3,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { SparklesText } from '@/components/ui/sparkles-text';
 
 export default function Main() {
     return (
         <div>
-
             {/* Intro Section */}
             <motion.div
-                initial={{opacity: 0, y: -50}}
-                animate={{opacity: 1, y: 0}}
-                transition={{duration: 1}}
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
                 className="flex flex-col items-center p-40 justify-center text-white"
             >
-                <h1 className="text-4xl">Hi, I am Lucius Aeby!</h1>
-                <p className="p-4">17y old Student at a vocational IT school in Switzerland CH</p>
+                <h1 className="text-3xl mb-10">
+                    Hi, I am <SparklesText text="Lucius Aeby" />
+                </h1>
                 <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer">
                     <Image
                         src="/github-icon-2.svg"
@@ -190,3 +191,4 @@ export default function Main() {
         </div>
     );
 }
+
