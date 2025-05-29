@@ -20,7 +20,7 @@ export default function Main() {
                         Hi, I am <SparklesText text="Lucius Aeby" />
                     </h1>
                     <p className="text-xl md:text-lg text-gray-300 text-center max-w-md">
-                        A passionate developer crafting modern web experiences
+                    I'm a developer and student at Kantonsschule Hottingen, always exploring new ways to build and improve digital experiences.
                     </p>
                     <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
                         <Image
