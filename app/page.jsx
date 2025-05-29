@@ -13,23 +13,28 @@ export default function Main() {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="flex flex-col items-center p-40 justify-center text-white"
+                className="flex flex-col items-center justify-center text-white min-h-[80vh] md:min-h-[60vh] p-10 md:p-40"
             >
-                <h1 className="text-3xl mb-10">
-                    Hi, I am <SparklesText text="Lucius Aeby" />
-                </h1>
-                <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer">
-                    <Image
-                        src="/github-icon-2.svg"
-                        width={60}
-                        height={60}
-                        alt="Github Icon"
-                        className="hover:scale-110 transition-transform duration-300"
-                    />
-                </a>
+                <div className="flex flex-col items-center gap-8 md:gap-10">
+                    <h1 className="text-4xl md:text-3xl mb-4 md:mb-10 text-center">
+                        Hi, I am <SparklesText text="Lucius Aeby" />
+                    </h1>
+                    <p className="text-xl md:text-lg text-gray-300 text-center max-w-md">
+                        A passionate developer crafting modern web experiences
+                    </p>
+                    <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
+                        <Image
+                            src="/github-icon-2.svg"
+                            width={60}
+                            height={60}
+                            alt="Github Icon"
+                            className="hover:scale-110 transition-transform duration-300"
+                        />
+                    </a>
+                </div>
             </motion.div>
 
-            <div className="w-[calc(100%-10rem)] h-1 bg-purple-900 mx-20"></div>
+            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20"></div>
 
             {/* About Me */}
             <motion.div
@@ -37,20 +42,20 @@ export default function Main() {
                 whileInView={{opacity: 1}}
                 viewport={{once: true}}
                 transition={{duration: 1}}
-                className="text-white p-6"
+                className="text-white p-4 md:p-6"
             >
-                <h1 className="flex flex-col justify-center items-center p-4 text-3xl" id="about-me">ABOUT ME</h1>
+                <h1 className="flex flex-col justify-center items-center p-4 text-2xl md:text-3xl" id="about-me">ABOUT ME</h1>
 
-                <div className="flex flex-row items-center justify-center px-10 gap-20 p-6">
+                <div className="flex flex-col md:flex-row items-center justify-center px-4 md:px-10 gap-8 md:gap-20 p-4 md:p-6">
                     <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300"
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-[250px] md:w-[300px]"
                         src="/PortfolioAebyLucius.jpeg"
                         width={300}
                         height={400}
                         alt="Lucius Aeby"
                     />
-                    <div className="flex flex-col">
-                        <h2 className="text-2xl mb-4">Lucius Aeby</h2>
+                    <div className="flex flex-col text-center md:text-left">
+                        <h2 className="text-xl md:text-2xl mb-4">Lucius Aeby</h2>
                         <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
                         <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
                         <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
@@ -60,9 +65,9 @@ export default function Main() {
             </motion.div>
 
             {/* Tech Stack Section */}
-            <div className="flex flex-col items-center justify-center text-white mt-12 px-4 mb-20">
-                <h2 className="text-2xl mb-4">I've worked with:</h2>
-                <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-col items-center justify-center text-white mt-8 md:mt-12 px-4 mb-12 md:mb-20">
+                <h2 className="text-xl md:text-2xl mb-4">I've worked with:</h2>
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
                     <Image
                         src="/github-icon-2.svg"
                         width={40}
@@ -91,17 +96,15 @@ export default function Main() {
                         alt="Tech 4"
                         className="hover:scale-110 transition-transform duration-300"
                     />
-                    {/* Add more as needed */}
                 </div>
             </div>
-
 
             {/* CV Download */}
             <motion.div
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{duration: 1}}
-                className="flex justify-center mt-6 mb-12"
+                className="flex justify-center mt-6 mb-8 md:mb-12"
             >
                 <a
                     href="/cv.pdf"
@@ -112,12 +115,11 @@ export default function Main() {
                 </a>
             </motion.div>
 
-            <div className="w-[calc(100%-10rem)] h-1 bg-purple-900 mx-20 mb-6"></div>
-
+            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20 mb-6"></div>
 
             {/* Projects Section */}
-            <div className="flex flex-col items-center justify-center text-white p-6">
-                <h1 id="projects" className="text-3xl mb-6">PROJECTS</h1>
+            <div className="flex flex-col items-center justify-center text-white p-4 md:p-6">
+                <h1 id="projects" className="text-2xl md:text-3xl mb-6">PROJECTS</h1>
 
                 {/* Project 1 */}
                 <motion.div
@@ -125,18 +127,18 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-row items-center justify-center gap-10 p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[90%] max-w-4xl"
+                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[95%] md:w-[90%] max-w-4xl"
                 >
                     <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300"
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/elementor-placeholder-image.webp"
                         alt="Project 1"
                         width={300}
                         height={200}
                     />
-                    <div className="flex flex-col">
-                        <div className="flex items-center gap-4 mb-2">
-                            <h2 className="text-2xl">Project One</h2>
+                    <div className="flex flex-col text-center md:text-left">
+                        <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
+                            <h2 className="text-xl md:text-2xl">Project One</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/project-one" 
                                 target="_blank" 
@@ -148,7 +150,7 @@ export default function Main() {
                                 </svg>
                             </a>
                         </div>
-                        <div className="flex gap-2 mb-4">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                             <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">JavaScript</span>
                             <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">React</span>
                             <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Node.js</span>
@@ -174,18 +176,18 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-row-reverse items-center justify-center gap-10 p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[90%] max-w-4xl"
+                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[95%] md:w-[90%] max-w-4xl"
                 >
                     <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300"
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/elementor-placeholder-image.webp"
                         alt="Project 2"
                         width={300}
                         height={200}
                     />
-                    <div className="flex flex-col">
-                        <div className="flex items-center gap-4 mb-2">
-                            <h2 className="text-2xl">Project Two</h2>
+                    <div className="flex flex-col text-center md:text-left">
+                        <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
+                            <h2 className="text-xl md:text-2xl">Project Two</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/project-two" 
                                 target="_blank" 
@@ -197,7 +199,7 @@ export default function Main() {
                                 </svg>
                             </a>
                         </div>
-                        <div className="flex gap-2 mb-4">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                             <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-sm">Python</span>
                             <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">Django</span>
                             <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">PostgreSQL</span>
@@ -223,18 +225,18 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-row items-center justify-center gap-10 p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[90%] max-w-4xl"
+                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[95%] md:w-[90%] max-w-4xl"
                 >
                     <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300"
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/elementor-placeholder-image.webp"
                         alt="Project 3"
                         width={300}
                         height={200}
                     />
-                    <div className="flex flex-col">
-                        <div className="flex items-center gap-4 mb-2">
-                            <h2 className="text-2xl">Project Three</h2>
+                    <div className="flex flex-col text-center md:text-left">
+                        <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
+                            <h2 className="text-xl md:text-2xl">Project Three</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/project-three" 
                                 target="_blank" 
@@ -246,7 +248,7 @@ export default function Main() {
                                 </svg>
                             </a>
                         </div>
-                        <div className="flex gap-2 mb-4">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                             <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">TypeScript</span>
                             <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Next.js</span>
                             <span className="px-2 py-1 bg-pink-500/20 text-pink-300 rounded-md text-sm">Tailwind CSS</span>
