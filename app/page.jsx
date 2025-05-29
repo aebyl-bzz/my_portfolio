@@ -125,7 +125,7 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-row items-center justify-center gap-10 p-6"
+                    className="flex flex-row items-center justify-center gap-10 p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[90%] max-w-4xl"
                 >
                     <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300"
@@ -134,11 +134,37 @@ export default function Main() {
                         width={300}
                         height={200}
                     />
-                    <div>
-                        <h2 className="text-2xl mb-2">Project One</h2>
-                        <p className="mb-2">texttexttext texttexttext</p>
-                        <p className="mb-2">texttexttext texttexttext</p>
-                        <p className="mb-2">texttexttext texttexttext</p>
+                    <div className="flex flex-col">
+                        <div className="flex items-center gap-4 mb-2">
+                            <h2 className="text-2xl">Project One</h2>
+                            <a 
+                                href="https://github.com/aebyl-bzz/project-one" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-purple-300 hover:text-purple-100 transition-colors"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div className="flex gap-2 mb-4">
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">JavaScript</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">React</span>
+                            <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Node.js</span>
+                        </div>
+                        <p className="mb-2 text-gray-300">A full-stack web application that demonstrates modern web development practices.</p>
+                        <p className="mb-2 text-gray-300">Features include user authentication, real-time updates, and responsive design.</p>
+                        <div className="mt-4">
+                            <a 
+                                href="https://project-one-demo.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block bg-purple-700 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
+                            >
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
 
@@ -148,7 +174,7 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-row-reverse items-center justify-center gap-10 p-6"
+                    className="flex flex-row-reverse items-center justify-center gap-10 p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[90%] max-w-4xl"
                 >
                     <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300"
@@ -157,11 +183,37 @@ export default function Main() {
                         width={300}
                         height={200}
                     />
-                    <div>
-                        <h2 className="text-2xl mb-2">Project Two</h2>
-                        <p className="mb-2">texttexttext texttexttext</p>
-                        <p className="mb-2">texttexttext texttexttext</p>
-                        <p className="mb-2">texttexttext texttexttext</p>
+                    <div className="flex flex-col">
+                        <div className="flex items-center gap-4 mb-2">
+                            <h2 className="text-2xl">Project Two</h2>
+                            <a 
+                                href="https://github.com/aebyl-bzz/project-two" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-purple-300 hover:text-purple-100 transition-colors"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div className="flex gap-2 mb-4">
+                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-sm">Python</span>
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">Django</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">PostgreSQL</span>
+                        </div>
+                        <p className="mb-2 text-gray-300">A robust backend system with RESTful API endpoints and database management.</p>
+                        <p className="mb-2 text-gray-300">Implements advanced features like caching, authentication, and data validation.</p>
+                        <div className="mt-4">
+                            <a 
+                                href="https://project-two-demo.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block bg-purple-700 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
+                            >
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
 
@@ -171,20 +223,46 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-row items-center justify-center gap-10 p-6"
+                    className="flex flex-row items-center justify-center gap-10 p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[90%] max-w-4xl"
                 >
                     <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300"
                         src="/elementor-placeholder-image.webp"
                         alt="Project 3"
                         width={300}
-                        height={100}
+                        height={200}
                     />
-                    <div>
-                        <h2 className="text-2xl mb-2">Project Three</h2>
-                        <p className="mb-2">texttexttext texttexttext</p>
-                        <p className="mb-2">texttexttext texttexttext</p>
-                        <p className="mb-2">texttexttext texttexttext</p>
+                    <div className="flex flex-col">
+                        <div className="flex items-center gap-4 mb-2">
+                            <h2 className="text-2xl">Project Three</h2>
+                            <a 
+                                href="https://github.com/aebyl-bzz/project-three" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-purple-300 hover:text-purple-100 transition-colors"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div className="flex gap-2 mb-4">
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">TypeScript</span>
+                            <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Next.js</span>
+                            <span className="px-2 py-1 bg-pink-500/20 text-pink-300 rounded-md text-sm">Tailwind CSS</span>
+                        </div>
+                        <p className="mb-2 text-gray-300">A modern web application built with the latest frontend technologies.</p>
+                        <p className="mb-2 text-gray-300">Features include server-side rendering, responsive design, and optimized performance.</p>
+                        <div className="mt-4">
+                            <a 
+                                href="https://project-three-demo.com" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block bg-purple-700 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
+                            >
+                                Live Demo
+                            </a>
+                        </div>
                     </div>
                 </motion.div>
             </div>
