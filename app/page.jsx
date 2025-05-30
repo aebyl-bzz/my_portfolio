@@ -57,10 +57,9 @@ export default function Main() {
                     />
                     <div className="flex flex-col text-center md:text-left">
                         <h2 className="text-xl md:text-2xl mb-4">Lucius Aeby</h2>
-                        <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
-                        <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
-                        <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
-                        <p className="mb-2">LoremIpsum LoremIpsum LoremIpsum LoremIpsum</p>
+                        <p className="mb-2">I'm an 18-year-old developer currently attending Kantonsschule Hottingen.</p>
+                        <p className="mb-2">In my free time, I enjoy playing soccer, skiing, gaming, and of course coding.</p>
+                        <p className="mb-2">I'm especially interested in building clean, efficient projects and constantly learning new technologies.</p>
                     </div>
                 </div>
             </motion.div>
@@ -109,7 +108,7 @@ export default function Main() {
                     />
                     <div className="flex flex-col text-center md:text-left">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-                            <h2 className="text-xl md:text-2xl">Project One</h2>
+                            <h2 className="text-xl md:text-2xl">Stock-Screener</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/project-one" 
                                 target="_blank" 
@@ -123,11 +122,11 @@ export default function Main() {
                         </div>
                         <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                             <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">JavaScript</span>
-                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">React</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">Python</span>
                             <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Node.js</span>
                         </div>
-                        <p className="mb-2 text-gray-300">A full-stack web application that demonstrates modern web development practices.</p>
-                        <p className="mb-2 text-gray-300">Features include user authentication, real-time updates, and responsive design.</p>
+                        <p className="mb-2 text-gray-300">A stock screener that allows you to track stocks, gives you suggestions helps you track stocks and more.</p>
+                        <p className="mb-2 text-gray-300">It includes intergrated ai, which scours the web related to any news related to the stock you are tracking, evaluates it and gives you a rating based on the news.</p>
                     </div>
                 </motion.div>
 
@@ -141,14 +140,14 @@ export default function Main() {
                 >
                     <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/elementor-placeholder-image.webp"
+                        src="/cyberattacks_demoImage.png"
                         alt="Project 2"
                         width={300}
                         height={200}
                     />
                     <div className="flex flex-col text-center md:text-left">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-                            <h2 className="text-xl md:text-2xl">Project Two</h2>
+                            <h2 className="text-xl md:text-2xl">project cyberattacks</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/project-two" 
                                 target="_blank" 
@@ -161,15 +160,14 @@ export default function Main() {
                             </a>
                         </div>
                         <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-sm">Python</span>
-                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">Django</span>
-                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">PostgreSQL</span>
+                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-sm">Java Script</span>
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">HTML</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">CSS</span>
                         </div>
-                        <p className="mb-2 text-gray-300">A robust backend system with RESTful API endpoints and database management.</p>
-                        <p className="mb-2 text-gray-300">Implements advanced features like caching, authentication, and data validation.</p>
+                        <p className="mb-2 text-gray-300">A Webpage about the cyberattacks in Ukraine</p>
+                        <p className="mb-2 text-gray-300">It has many responsive features, such as an interactive map, a timeline of the attacks and more.</p>
                     </div>
                 </motion.div>
-
                 {/* Project 3 */}
                 <motion.div
                     initial={{x: -100, opacity: 0}}
@@ -204,8 +202,8 @@ export default function Main() {
                             <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Next.js</span>
                             <span className="px-2 py-1 bg-pink-500/20 text-pink-300 rounded-md text-sm">Tailwind CSS</span>
                         </div>
-                        <p className="mb-2 text-gray-300">A modern web application built with the latest frontend technologies.</p>
-                        <p className="mb-2 text-gray-300">Features include server-side rendering, responsive design, and optimized performance.</p>
+                        <p className="mb-2 text-gray-300">Work in progress</p>
+                        <p className="mb-2 text-gray-300"></p>
                     </div>
                 </motion.div>
             </div>

@@ -21,9 +21,7 @@ export default function Footer() {
                         <li><Link href="/" className="hover:underline">Home</Link></li>
                         <li><Link href="/#about-me" className="hover:underline">About Me</Link></li>
                         <li><Link href="/#projects" className="hover:underline">Projects</Link></li>
-                        <li><Link href="/cv.pdf" className="hover:underline" download>Download CV</Link></li>
-                        <li><Link href="/impressum" className="hover:underline">Impressum</Link></li>
-                        <li><Link href="/datenschutz" className="hover:underline">Datenschutz</Link></li>
+                    
                     </ul>
                 </div>
 
