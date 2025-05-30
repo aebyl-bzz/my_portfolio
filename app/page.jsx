@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SparklesText } from '@/components/ui/sparkles-text';
+import TechStack from './components/TechStack';
 
 export default function Main() {
     return (
@@ -13,7 +14,7 @@ export default function Main() {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className="flex flex-col items-center justify-center text-white min-h-[80vh] md:min-h-[60vh] p-10 md:p-40"
+                className="flex flex-col items-center justify-center text-white min-h-[80vh] md:min-h-[60vh] p-10 md:p-40 pt-24 md:pt-40"
             >
                 <div className="flex flex-col items-center gap-8 md:gap-10">
                     <h1 className="text-4xl md:text-3xl mb-4 md:mb-10 text-center">
@@ -44,7 +45,7 @@ export default function Main() {
                 transition={{duration: 1}}
                 className="text-white p-4 md:p-6"
             >
-                <h1 className="flex flex-col justify-center items-center p-4 text-2xl md:text-3xl" id="about-me">ABOUT ME</h1>
+                <h1 className="flex flex-col justify-center items-center p-4 text-2xl md:text-3xl font-bold" id="about-me">ABOUT ME</h1>
 
                 <div className="flex flex-col md:flex-row items-center justify-center px-4 md:px-10 gap-8 md:gap-20 p-4 md:p-6">
                     <Image
@@ -64,41 +65,6 @@ export default function Main() {
                 </div>
             </motion.div>
 
-            {/* Tech Stack Section */}
-            <div className="flex flex-col items-center justify-center text-white mt-8 md:mt-12 px-4 mb-12 md:mb-20">
-                <h2 className="text-xl md:text-2xl mb-4">I've worked with:</h2>
-                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-                    <Image
-                        src="/github-icon-2.svg"
-                        width={40}
-                        height={40}
-                        alt="Tech 1"
-                        className="hover:scale-110 transition-transform duration-300"
-                    />
-                    <Image
-                        src="/github-icon-2.svg"
-                        width={40}
-                        height={40}
-                        alt="Tech 2"
-                        className="hover:scale-110 transition-transform duration-300"
-                    />
-                    <Image
-                        src="/github-icon-2.svg"
-                        width={40}
-                        height={40}
-                        alt="Tech 3"
-                        className="hover:scale-110 transition-transform duration-300"
-                    />
-                    <Image
-                        src="/github-icon-2.svg"
-                        width={40}
-                        height={40}
-                        alt="Tech 4"
-                        className="hover:scale-110 transition-transform duration-300"
-                    />
-                </div>
-            </div>
-
             {/* CV Download */}
             <motion.div
                 initial={{opacity: 0}}
@@ -117,9 +83,14 @@ export default function Main() {
 
             <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20 mb-6"></div>
 
+            {/* Tech Stack Section */}
+            <TechStack />
+
+            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20 mb-6"></div>
+
             {/* Projects Section */}
             <div className="flex flex-col items-center justify-center text-white p-4 md:p-6">
-                <h1 id="projects" className="text-2xl md:text-3xl mb-6">PROJECTS</h1>
+                <h1 id="projects" className="text-2xl md:text-3xl font-bold mb-6">PROJECTS</h1>
 
                 {/* Project 1 */}
                 <motion.div
@@ -157,16 +128,6 @@ export default function Main() {
                         </div>
                         <p className="mb-2 text-gray-300">A full-stack web application that demonstrates modern web development practices.</p>
                         <p className="mb-2 text-gray-300">Features include user authentication, real-time updates, and responsive design.</p>
-                        <div className="mt-4">
-                            <a 
-                                href="https://project-one-demo.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="inline-block bg-purple-700 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
-                            >
-                                Live Demo
-                            </a>
-                        </div>
                     </div>
                 </motion.div>
 
@@ -206,16 +167,6 @@ export default function Main() {
                         </div>
                         <p className="mb-2 text-gray-300">A robust backend system with RESTful API endpoints and database management.</p>
                         <p className="mb-2 text-gray-300">Implements advanced features like caching, authentication, and data validation.</p>
-                        <div className="mt-4">
-                            <a 
-                                href="https://project-two-demo.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="inline-block bg-purple-700 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
-                            >
-                                Live Demo
-                            </a>
-                        </div>
                     </div>
                 </motion.div>
 
@@ -255,16 +206,6 @@ export default function Main() {
                         </div>
                         <p className="mb-2 text-gray-300">A modern web application built with the latest frontend technologies.</p>
                         <p className="mb-2 text-gray-300">Features include server-side rendering, responsive design, and optimized performance.</p>
-                        <div className="mt-4">
-                            <a 
-                                href="https://project-three-demo.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="inline-block bg-purple-700 hover:bg-purple-600 text-white px-4 py-2 rounded-md transition-colors"
-                            >
-                                Live Demo
-                            </a>
-                        </div>
                     </div>
                 </motion.div>
             </div>
