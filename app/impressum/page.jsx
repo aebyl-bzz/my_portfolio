@@ -1,6 +1,6 @@
 export default function Impressum() {
     return (
-        <div className="container mx-auto px-4 py-20 mt-16">
+        <div className="container mx-auto px-4 py-20 mt-16 text-white">
             <h1 className="text-3xl font-bold mb-8">Impressum</h1>
             
             <div className="space-y-8">
