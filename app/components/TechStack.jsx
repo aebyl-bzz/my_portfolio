@@ -6,6 +6,7 @@ import { FaPython, FaJs, FaHtml5, FaCss3Alt, FaJava, FaReact, FaDocker, FaAws } 
 import { SiNextdotjs, SiTailwindcss, SiMysql, SiMongodb } from 'react-icons/si';
 
 const categories = {
+    'All': [],
     'Frontend': [
         { name: 'HTML5', icon: FaHtml5, color: '#E34F26' },
         { name: 'CSS3', icon: FaCss3Alt, color: '#1572B6' },
@@ -26,22 +27,25 @@ const categories = {
     ]
 };
 
+// Flatten all technologies for the "All" category
+categories['All'] = Object.values(categories).flat().filter(tech => tech.name);
+
 export default function TechStack() {
-    const [activeCategory, setActiveCategory] = useState('Frontend');
+    const [activeCategory, setActiveCategory] = useState('All');
 
     return (
         <div className="w-full max-w-6xl mx-auto px-4 py-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">I'VE WORKED WITH</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8" id="skills">I'VE WORKED WITH</h2>
             
             {/* Category Selector */}
-            <div className="flex justify-center gap-4 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {Object.keys(categories).map((category) => (
                     <button
                         key={category}
                         onClick={() => setActiveCategory(category)}
                         className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                             activeCategory === category
-                                ? 'bg-purple-700 text-white'
+                                ? 'bg-[#84B] text-white'
                                 : 'bg-purple-900/30 text-purple-300 hover:bg-purple-900/50'
                         }`}
                     >

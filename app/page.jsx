@@ -26,8 +26,8 @@ export default function Main() {
                     <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
                         <Image
                             src="/github-icon-2.svg"
-                            width={60}
-                            height={60}
+                            width={55}
+                            height={55}
                             alt="Github Icon"
                             className="hover:scale-110 transition-transform duration-300"
                         />
@@ -35,7 +35,7 @@ export default function Main() {
                 </div>
             </motion.div>
 
-            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20"></div>
+            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-[#84B] mx-4 md:mx-20"></div>
 
             {/* About Me */}
             <motion.div
@@ -64,28 +64,12 @@ export default function Main() {
                 </div>
             </motion.div>
 
-            {/* CV Download */}
-            <motion.div
-                initial={{opacity: 0}}
-                whileInView={{opacity: 1}}
-                transition={{duration: 1}}
-                className="flex justify-center mt-6 mb-8 md:mb-12"
-            >
-                <a
-                    href="/cv.pdf"
-                    download
-                    className="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-2 px-6 rounded-2xl transition duration-300"
-                >
-                    Download CV
-                </a>
-            </motion.div>
-
-            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20 mb-6"></div>
+            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-[#84B] mx-4 md:mx-20 mb-6"></div>
 
             {/* Tech Stack Section */}
             <TechStack />
 
-            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-purple-900 mx-4 md:mx-20 mb-6"></div>
+            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-[#84B] mx-4 md:mx-20 mb-6"></div>
 
             {/* Projects Section */}
             <div className="flex flex-col items-center justify-center text-white p-4 md:p-6">
@@ -160,9 +144,9 @@ export default function Main() {
                             </a>
                         </div>
                         <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-sm">Java Script</span>
-                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">HTML</span>
-                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">CSS</span>
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">JavaScript</span>
+                            <span className="px-2 py-1 bg-orange-500/20 text-orange-300 rounded-md text-sm">HTML</span>
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">CSS</span>
                         </div>
                         <p className="mb-2 text-gray-300">A Webpage about the cyberattacks in Ukraine</p>
                         <p className="mb-2 text-gray-300">It has many responsive features, such as an interactive map, a timeline of the attacks and more.</p>
@@ -199,8 +183,8 @@ export default function Main() {
                         </div>
                         <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
                             <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">TypeScript</span>
-                            <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Next.js</span>
-                            <span className="px-2 py-1 bg-pink-500/20 text-pink-300 rounded-md text-sm">Tailwind CSS</span>
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">Next.js</span>
+                            <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 rounded-md text-sm">Tailwind CSS</span>
                         </div>
                         <p className="mb-2 text-gray-300">Work in progress</p>
                         <p className="mb-2 text-gray-300"></p>

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Footer() {
     return (
-        <footer className="bg-purple-900 text-white px-8 py-12 mt-12">
+        <footer className="bg-[#84B] text-white px-8 py-12 mt-12">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
 
                 {/* Contact Info */}
@@ -21,7 +21,7 @@ export default function Footer() {
                         <li><Link href="/" className="hover:underline">Home</Link></li>
                         <li><Link href="/#about-me" className="hover:underline">About Me</Link></li>
                         <li><Link href="/#projects" className="hover:underline">Projects</Link></li>
-                    
+                        <li><Link href="/impressum" className="hover:underline">Impressum</Link></li>
                     </ul>
                 </div>
 
@@ -49,7 +49,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="border-t border-purple-700 mt-8 pt-4 text-center text-sm text-purple-300">
+            <div className="border-t border-white/20 mt-8 pt-4 text-center text-sm text-white/80">
                 &copy; {new Date().getFullYear()} Lucius Aeby. All rights reserved.
             </div>
         </footer>
