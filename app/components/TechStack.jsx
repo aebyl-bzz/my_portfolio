@@ -35,7 +35,7 @@ export default function TechStack() {
 
     return (
         <div className="w-full max-w-6xl mx-auto px-4 py-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8" id="skills">I'VE WORKED WITH</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8" id="skills">I've worked with</h2>
             
             {/* Category Selector */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">

@@ -35,7 +35,7 @@ export default function Footer() {
                                 alt="GitHub"
                                 width={30}
                                 height={30}
-                                className="hover:scale-110 transition-transform duration-300"
+                                className="hover:scale-110 transition-transform duration-300 [filter:invert(1)_brightness(2)]"
                             />
                         </a>
                         {/* Add more icons if needed */}

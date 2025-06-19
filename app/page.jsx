@@ -29,13 +29,11 @@ export default function Main() {
                             width={55}
                             height={55}
                             alt="Github Icon"
-                            className="hover:scale-110 transition-transform duration-300"
+                            className="hover:scale-110 transition-transform duration-300 [filter:invert(0)_sepia(1)_hue-rotate(227deg)_saturate(8)_brightness(1.2)]"
                         />
                     </a>
                 </div>
             </motion.div>
-
-            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-[#84B] mx-4 md:mx-20"></div>
 
             {/* About Me */}
             <motion.div
@@ -43,10 +41,12 @@ export default function Main() {
                 whileInView={{opacity: 1}}
                 viewport={{once: true}}
                 transition={{duration: 1}}
-                className="text-white p-4 md:p-6"
+                className="text-white p-4 md:p-6 mt-16"
             >
-                <h1 className="flex flex-col justify-center items-center p-4 text-2xl md:text-3xl font-bold" id="about-me">ABOUT ME</h1>
-
+                <div className="flex flex-col justify-center items-center">
+                  <h1 className="p-4 text-2xl md:text-3xl font-bold" id="about-me">About me</h1>
+                  <div className="w-12 h-1 bg-[#84B] rounded-full mb-4"></div>
+                </div>
                 <div className="flex flex-col md:flex-row items-center justify-center px-4 md:px-10 gap-8 md:gap-20 p-4 md:p-6">
                     <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-[250px] md:w-[300px]"
@@ -62,35 +62,58 @@ export default function Main() {
                         <p className="mb-2">I'm especially interested in building clean, efficient projects and constantly learning new technologies.</p>
                     </div>
                 </div>
+                {/* Hobbys Section */}
+                <div className="mt-8 flex flex-col items-center">
+                  <h3 className="text-lg md:text-xl font-semibold mb-2">Hobbys</h3>
+                  <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
+                    <div className="flex flex-col items-center max-w-xs w-48">
+                      <Image
+                        src="/fussball_portfolio.jpg"
+                        width={192}
+                        height={128}
+                        alt="Fussball"
+                        className="rounded-md mb-2 object-cover w-48 h-32"
+                      />
+                      <p className="text-center text-gray-300 text-sm mt-2">Ich spiele seit 5 Jahren Fussball und bin aktuell beim FC Redstar aktiv.</p>
+                    </div>
+                    <div className="flex flex-col items-center max-w-xs w-48">
+                      <Image
+                        src="/skifahren_myportfolio.jpg"
+                        width={192}
+                        height={128}
+                        alt="Skifahren"
+                        className="rounded-md mb-2 object-cover w-48 h-32"
+                      />
+                      <p className="text-center text-gray-300 text-sm mt-2">Skifahren mache ich seit ich klein bin. Früher war ich im Skiclub Lenzerheide, heute fahre ich meist mit Familie und Freunden.</p>
+                    </div>
+                  </div>
+                </div>
             </motion.div>
 
-            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-[#84B] mx-4 md:mx-20 mb-6"></div>
-
             {/* Tech Stack Section */}
-            <TechStack />
-
-            <div className="w-[calc(100%-2rem)] md:w-[calc(100%-10rem)] h-1 bg-[#84B] mx-4 md:mx-20 mb-6"></div>
+            <div className="w-full max-w-6xl mx-auto px-4 py-8 mt-16">
+              <div className="flex flex-col justify-center items-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2" id="skills">I've worked with</h2>
+                <div className="w-12 h-1 bg-[#84B] rounded-full mb-8"></div>
+              </div>
+              <TechStack />
+            </div>
 
             {/* Projects Section */}
-            <div className="flex flex-col items-center justify-center text-white p-4 md:p-6">
-                <h1 id="projects" className="text-2xl md:text-3xl font-bold mb-6">PROJECTS</h1>
-
+            <div className="flex flex-col items-center justify-center text-white p-4 md:p-6 mt-16">
+                <div className="flex flex-col justify-center items-center">
+                  <h1 id="projects" className="text-2xl md:text-3xl font-bold mb-2">Projects</h1>
+                  <div className="w-12 h-1 bg-[#84B] rounded-full mb-8"></div>
+                </div>
                 {/* Project 1 */}
                 <motion.div
                     initial={{x: -100, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[95%] md:w-[90%] max-w-4xl"
+                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
                 >
-                    <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/elementor-placeholder-image.webp"
-                        alt="Project 1"
-                        width={300}
-                        height={200}
-                    />
-                    <div className="flex flex-col text-center md:text-left">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">Stock-Screener</h2>
                             <a 
@@ -112,6 +135,15 @@ export default function Main() {
                         <p className="mb-2 text-gray-300">A stock screener that allows you to track stocks, gives you suggestions helps you track stocks and more.</p>
                         <p className="mb-2 text-gray-300">It includes intergrated ai, which scours the web related to any news related to the stock you are tracking, evaluates it and gives you a rating based on the news.</p>
                     </div>
+                    <div className="w-full md:w-1/2 flex justify-center">
+                      <Image
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
+                        src="/elementor-placeholder-image.webp"
+                        alt="Project 1"
+                        width={300}
+                        height={200}
+                      />
+                    </div>
                 </motion.div>
 
                 {/* Project 2 */}
@@ -120,16 +152,9 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[95%] md:w-[90%] max-w-4xl"
+                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
                 >
-                    <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/cyberattacks_demoImage.png"
-                        alt="Project 2"
-                        width={300}
-                        height={200}
-                    />
-                    <div className="flex flex-col text-center md:text-left">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">project cyberattacks</h2>
                             <a 
@@ -151,6 +176,15 @@ export default function Main() {
                         <p className="mb-2 text-gray-300">A Webpage about the cyberattacks in Ukraine</p>
                         <p className="mb-2 text-gray-300">It has many responsive features, such as an interactive map, a timeline of the attacks and more.</p>
                     </div>
+                    <div className="w-full md:w-1/2 flex justify-center">
+                      <Image
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
+                        src="/cyberattacks_demoImage.png"
+                        alt="Project 2"
+                        width={300}
+                        height={200}
+                      />
+                    </div>
                 </motion.div>
                 {/* Project 3 */}
                 <motion.div
@@ -158,16 +192,9 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-[95%] md:w-[90%] max-w-4xl"
+                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
                 >
-                    <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/elementor-placeholder-image.webp"
-                        alt="Project 3"
-                        width={300}
-                        height={200}
-                    />
-                    <div className="flex flex-col text-center md:text-left">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">Project Three</h2>
                             <a 
@@ -188,6 +215,15 @@ export default function Main() {
                         </div>
                         <p className="mb-2 text-gray-300">Work in progress</p>
                         <p className="mb-2 text-gray-300"></p>
+                    </div>
+                    <div className="w-full md:w-1/2 flex justify-center">
+                      <Image
+                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
+                        src="/elementor-placeholder-image.webp"
+                        alt="Project 3"
+                        width={300}
+                        height={200}
+                      />
                     </div>
                 </motion.div>
             </div>
