@@ -28,14 +28,13 @@ export default function Footer() {
                 {/* Social */}
                 <div>
                     <h2 className="text-xl font-semibold mb-4">Follow Me</h2>
-                    <div className="flex items-center gap-4">
-                        <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer">
+                    <div className="flex items-center gap-4">                        <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer">
                             <Image
-                                src="/github-icon-2.svg"
+                                src="/github-icon-reversed.svg"
                                 alt="GitHub"
                                 width={30}
                                 height={30}
-                                className="hover:scale-110 transition-transform duration-300 [filter:invert(1)_brightness(2)]"
+                                className="hover:scale-110 transition-transform duration-300"
                             />
                         </a>
                         {/* Add more icons if needed */}

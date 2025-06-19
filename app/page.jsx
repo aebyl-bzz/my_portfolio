@@ -22,14 +22,13 @@ export default function Main() {
                     </h1>
                     <p className="text-xl md:text-lg text-gray-300 text-center max-w-md">
                     I'm a developer and student at Kantonsschule Hottingen, always exploring new ways to build and improve digital experiences.
-                    </p>
-                    <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
+                    </p>                    <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
                         <Image
-                            src="/github-icon-2.svg"
+                            src="/github-icon-custom.svg"
                             width={55}
                             height={55}
                             alt="Github Icon"
-                            className="hover:scale-110 transition-transform duration-300 [filter:invert(0)_sepia(1)_hue-rotate(227deg)_saturate(8)_brightness(1.2)]"
+                            className="hover:scale-110 transition-transform duration-300"
                         />
                     </a>
                 </div>
