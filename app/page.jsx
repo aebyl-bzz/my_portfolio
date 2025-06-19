@@ -62,27 +62,27 @@ export default function Main() {
                     </div>
                 </div>
                 {/* Hobbys Section */}                <div className="mt-12 flex flex-col items-center">
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Hobbys</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Hobbies</h3>
                   <div className="flex flex-col md:flex-row gap-10 items-start justify-center">
                     <div className="flex flex-col items-center max-w-sm w-64">
                       <Image
                         src="/fussball_portfolio.jpg"
                         width={256}
                         height={192}
-                        alt="Fussball"
+                        alt="Football"
                         className="rounded-md mb-3 object-cover w-64 h-48 shadow-lg"
                       />
-                      <p className="text-center text-gray-300 text-base mt-3">Ich spiele seit 5 Jahren Fussball und bin aktuell beim FC Redstar aktiv.</p>
+                      <p className="text-center text-gray-300 text-base mt-3">I've been playing football since I was 5 years old and I'm currently active at FC Redstar.</p>
                     </div>
                     <div className="flex flex-col items-center max-w-sm w-64">
                       <Image
                         src="/skifahren_myportfolio.jpg"
                         width={256}
                         height={192}
-                        alt="Skifahren"
+                        alt="Skiing"
                         className="rounded-md mb-3 object-cover w-64 h-48 shadow-lg"
                       />
-                      <p className="text-center text-gray-300 text-base mt-3">Skifahren mache ich seit ich klein bin. Früher war ich im Skiclub Lenzerheide, heute fahre ich meist mit Familie und Freunden.</p>
+                      <p className="text-center text-gray-300 text-base mt-3">I used to be in the Lenzerheide Ski Club, but now I mostly ski with family and friends.</p>
                     </div>
                   </div>
                 </div>
