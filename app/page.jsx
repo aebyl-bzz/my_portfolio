@@ -61,29 +61,28 @@ export default function Main() {
                         <p className="mb-2">I'm especially interested in building clean, efficient projects and constantly learning new technologies.</p>
                     </div>
                 </div>
-                {/* Hobbys Section */}
-                <div className="mt-8 flex flex-col items-center">
-                  <h3 className="text-lg md:text-xl font-semibold mb-2">Hobbys</h3>
-                  <div className="flex flex-col md:flex-row gap-8 items-start justify-center">
-                    <div className="flex flex-col items-center max-w-xs w-48">
+                {/* Hobbys Section */}                <div className="mt-12 flex flex-col items-center">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">Hobbys</h3>
+                  <div className="flex flex-col md:flex-row gap-10 items-start justify-center">
+                    <div className="flex flex-col items-center max-w-sm w-64">
                       <Image
                         src="/fussball_portfolio.jpg"
-                        width={192}
-                        height={128}
+                        width={256}
+                        height={192}
                         alt="Fussball"
-                        className="rounded-md mb-2 object-cover w-48 h-32"
+                        className="rounded-md mb-3 object-cover w-64 h-48 shadow-lg"
                       />
-                      <p className="text-center text-gray-300 text-sm mt-2">Ich spiele seit 5 Jahren Fussball und bin aktuell beim FC Redstar aktiv.</p>
+                      <p className="text-center text-gray-300 text-base mt-3">Ich spiele seit 5 Jahren Fussball und bin aktuell beim FC Redstar aktiv.</p>
                     </div>
-                    <div className="flex flex-col items-center max-w-xs w-48">
+                    <div className="flex flex-col items-center max-w-sm w-64">
                       <Image
                         src="/skifahren_myportfolio.jpg"
-                        width={192}
-                        height={128}
+                        width={256}
+                        height={192}
                         alt="Skifahren"
-                        className="rounded-md mb-2 object-cover w-48 h-32"
+                        className="rounded-md mb-3 object-cover w-64 h-48 shadow-lg"
                       />
-                      <p className="text-center text-gray-300 text-sm mt-2">Skifahren mache ich seit ich klein bin. Früher war ich im Skiclub Lenzerheide, heute fahre ich meist mit Familie und Freunden.</p>
+                      <p className="text-center text-gray-300 text-base mt-3">Skifahren mache ich seit ich klein bin. Früher war ich im Skiclub Lenzerheide, heute fahre ich meist mit Familie und Freunden.</p>
                     </div>
                   </div>
                 </div>
