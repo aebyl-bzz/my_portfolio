@@ -15,14 +15,13 @@ export default function Main() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
                 className="flex flex-col items-center justify-center text-white min-h-[80vh] md:min-h-[60vh] p-10 md:p-40 pt-24 md:pt-40"
-            >
-                <div className="flex flex-col items-center gap-8 md:gap-10">
+            >                <div className="flex flex-col items-center gap-8 md:gap-10 px-4 md:px-10 max-w-3xl mx-auto">
                     <h1 className="text-4xl md:text-3xl mb-4 md:mb-10 text-center">
                         Hi, I am <SparklesText text="Lucius Aeby" />
                     </h1>
-                    <p className="text-xl md:text-lg text-gray-300 text-center max-w-md">
+                    <p className="text-xl md:text-lg text-gray-300 text-center max-w-xl mx-auto">
                     I'm a developer and student at Kantonsschule Hottingen, always exploring new ways to build and improve digital experiences.
-                    </p>                    <a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
+                    </p><a href="https://github.com/aebyl-bzz" target="_blank" rel="noopener noreferrer" className="mt-4">
                         <Image
                             src="/github-icon-custom.svg"
                             width={55}
