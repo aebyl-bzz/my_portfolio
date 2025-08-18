@@ -224,11 +224,11 @@ trains a random Forest model on games before 2020 and tests predictions on games
                 </motion.div>
                 {/* Project 4 */}
                 <motion.div
-                    initial={{x: -100, opacity: 0}}
+                    initial={{x: 100, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
@@ -301,11 +301,11 @@ trains a random Forest model on games before 2020 and tests predictions on games
                 </motion.div>
                 {/* Project 6 */}
                 <motion.div
-                    initial={{x: -100, opacity: 0}}
+                    initial={{x: 100, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
