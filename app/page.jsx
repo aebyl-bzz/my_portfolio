@@ -215,8 +215,8 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     <div className="w-full md:w-1/2 flex justify-center">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/elementor-placeholder-image.webp"
-                        alt="Project 3"
+                        src="/nba-game-predictor.png"
+                        alt="Project 3" 
                         width={300}
                         height={200}
                       />
