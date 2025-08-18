@@ -125,10 +125,10 @@ export default function Main() {
             </div>
 
             {/* Projects Section */}
-            <div className="flex flex-col items-center justify-center text-white p-4 md:p-6 mt-16">
+            <div className="flex flex-col items-center justify-center text-white p-2 md:p-6 mt-16 px-4">
                 <div className="flex flex-col justify-center items-center">
                   <h1 id="projects" className="text-2xl md:text-3xl font-bold mb-2">Projects</h1>
-                  <div className="w-12 h-1 bg-[#84B] rounded-full mb-8"></div>
+                  <div className="w-12 h-1 bg-[#84B] rounded-full mb-6 md:mb-8"></div>
                 </div>
                 {/* Project 1 */}
                 <motion.div
@@ -136,34 +136,34 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
-                        <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-                            <h2 className="text-xl md:text-2xl">AI Stock Screener</h2>
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full px-2 md:px-0">
+                        <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 mb-3 md:mb-2 flex-wrap">
+                            <h2 className="text-lg md:text-xl lg:text-2xl">AI Stock Screener</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/ai-stock-screener" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="text-purple-300 hover:text-purple-100 transition-colors"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="md:w-6 md:h-6">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
                         </div>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">Typescript</span>
-                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">Python</span>
-                            <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-sm">Next.js</span>
+                        <div className="flex flex-wrap justify-center md:justify-start gap-1 md:gap-2 mb-3 md:mb-4">
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-xs md:text-sm">Typescript</span>
+                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-xs md:text-sm">Python</span>
+                            <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-md text-xs md:text-sm">Next.js</span>
                         </div>
-                        <p className="mb-2 text-gray-300">A stock screener that allows you to track stocks, gives you suggestions and more.</p>
-                        <p className="mb-2 text-gray-300">It includes intergrated ai, which scours the web related to any news related to the stock you are tracking, evaluates it and gives you a rating based on the news.</p>
+                        <p className="mb-2 text-gray-300 text-sm md:text-base">A stock screener that allows you to track stocks, gives you suggestions and more.</p>
+                        <p className="mb-2 text-gray-300 text-sm md:text-base">It includes intergrated ai, which scours the web related to any news related to the stock you are tracking, evaluates it and gives you a rating based on the news.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <div className="relative">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full mt-4 md:mt-0">
+                      <div className="relative max-w-[280px] md:max-w-none">
                         <Image
-                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full h-auto cursor-pointer"
                           src={aiScreenerImages[aiScreenerImageIndex].src}
                           alt={aiScreenerImages[aiScreenerImageIndex].alt}
                           width={300}
@@ -178,19 +178,19 @@ export default function Main() {
                         {/* Navigation arrows */}
                         <button
                           onClick={prevAiScreenerImage}
-                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors duration-200"
+                          className="absolute left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors duration-200"
                           aria-label="Previous image"
                         >
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="md:w-4 md:h-4">
                             <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
                           </svg>
                         </button>
                         <button
                           onClick={nextAiScreenerImage}
-                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors duration-200"
+                          className="absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors duration-200"
                           aria-label="Next image"
                         >
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="md:w-4 md:h-4">
                             <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
                           </svg>
                         </button>
@@ -217,11 +217,11 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                        className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                        className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
-                        <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-                            <h2 className="text-xl md:text-2xl">NBA Game Predictor</h2>
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full px-2 md:px-0">
+                        <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 mb-3 md:mb-2 flex-wrap">
+                            <h2 className="text-lg md:text-xl lg:text-2xl">NBA Game Predictor</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/nba-game-predictor" 
                                 target="_blank" 
@@ -233,17 +233,17 @@ export default function Main() {
                                 </svg>
                             </a>
                         </div>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">Python</span>
+                        <div className="flex flex-wrap justify-center md:justify-start gap-1 md:gap-2 mb-3 md:mb-4">
+                            <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-xs md:text-sm">Python</span>
                         </div>
-                        <p className="mb-2 text-gray-300">A machine learning project to predict NBA game outcomes using historical data and team statistics.</p>
-                        <p className="mb-2 text-gray-300">Loads 65,000+ NBA games,
+                        <p className="mb-2 text-gray-300 text-sm md:text-base">A machine learning project to predict NBA game outcomes using historical data and team statistics.</p>
+                        <p className="mb-2 text-gray-300 text-sm md:text-base">Loads 65,000+ NBA games,
 trains a random Forest model on games before 2020 and tests predictions on games after 2020.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <div className="relative">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full mt-4 md:mt-0">
+                      <div className="relative max-w-[280px] md:max-w-none">
                         <Image
-                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full h-auto cursor-pointer"
                           src="/nba-game-predictor.png"
                           alt="NBA Game Predictor" 
                           width={300}
@@ -263,33 +263,33 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
-                        <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-                            <h2 className="text-xl md:text-2xl">Mensa App</h2>
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full px-2 md:px-0">
+                        <div className="flex items-center justify-center md:justify-start gap-3 md:gap-4 mb-3 md:mb-2 flex-wrap">
+                            <h2 className="text-lg md:text-xl lg:text-2xl">Mensa App</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/Mensa-App" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="text-purple-300 hover:text-purple-100 transition-colors"
                             >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="md:w-6 md:h-6">
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
                         </div>
-                        <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-sm">JavaScript</span>
-                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-sm">CSS</span>
+                        <div className="flex flex-wrap justify-center md:justify-start gap-1 md:gap-2 mb-3 md:mb-4">
+                            <span className="px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded-md text-xs md:text-sm">JavaScript</span>
+                            <span className="px-2 py-1 bg-blue-500/20 text-blue-300 rounded-md text-xs md:text-sm">CSS</span>
                         </div>
-                        <p className="mb-2 text-gray-300">Web application to manage a school cafeteria menu. Users can register, login, view the menu and pre-order meals. Includes an admin interface for adding, deleting and editing meals.</p>
-                        <p className="mb-2 text-gray-300">I worked as the scrum master for this project.</p>
+                        <p className="mb-2 text-gray-300 text-sm md:text-base">Web application to manage a school cafeteria menu. Users can register, login, view the menu and pre-order meals. Includes an admin interface for adding, deleting and editing meals.</p>
+                        <p className="mb-2 text-gray-300 text-sm md:text-base">I worked as the scrum master for this project.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <div className="relative">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full mt-4 md:mt-0">
+                      <div className="relative max-w-[280px] md:max-w-none">
                         <Image
-                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full h-auto cursor-pointer"
                           src="/Mensa-App.png"
                           alt="Mensa App"
                           width={300}
@@ -309,7 +309,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                    className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
@@ -326,7 +326,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                             </a>
                         </div>
                         <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-4">
-                            <span className="px-2 py-1 bg-rose-500/20 text-rose-300 rounded-md text-sm">Java</span>
+                            <span className="px-2 py-1 bg-rose-500/20 text-rose-300 rounded-md text-xs md:text-sm">Java</span>
                         </div>
                         <p className="mb-2 text-gray-300">A Java-based banking system simulation that supports creating accounts, depositing and withdrawing money, transferring money and more.</p>
                         <p className="mb-2 text-gray-300">Implements core banking operations with user authentication and transaction history tracking.</p>
@@ -355,7 +355,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
@@ -417,7 +417,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                    className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
@@ -439,10 +439,10 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">This is a very simple Black jack game made with Python. It is played in the console.</p>
                         <p className="mb-2 text-gray-300">Features standard blackjack rules with player vs dealer gameplay and basic betting functionality.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <div className="relative">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full mt-4 md:mt-0">
+                      <div className="relative max-w-[280px] md:max-w-none">
                         <Image
-                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full h-auto cursor-pointer"
                           src="/black-jack.png"
                           alt="Black Jack Game"
                           width={300}
@@ -463,7 +463,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-4 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-6 md:mb-8 w-full max-w-4xl min-h-[400px] md:h-[400px]"
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
