@@ -5,8 +5,36 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { SparklesText } from '@/components/ui/sparkles-text';
 import TechStack from './components/TechStack';
+import { useState } from 'react';
 
 export default function Main() {
+    const [aiScreenerImageIndex, setAiScreenerImageIndex] = useState(0);
+    const [modalImage, setModalImage] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    const aiScreenerImages = [
+        { src: '/ai-stock-screener-home.png', alt: 'AI Stock Screener Home' },
+        { src: '/ai-stock-screener-insights.png', alt: 'AI Stock Screener Insights' }
+    ];
+
+    const nextAiScreenerImage = () => {
+        setAiScreenerImageIndex((prev) => (prev + 1) % aiScreenerImages.length);
+    };
+
+    const prevAiScreenerImage = () => {
+        setAiScreenerImageIndex((prev) => (prev - 1 + aiScreenerImages.length) % aiScreenerImages.length);
+    };
+
+    const openModal = (imageSrc, imageAlt) => {
+        setModalImage({ src: imageSrc, alt: imageAlt });
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setModalImage(null);
+    };
+
     return (
         <div>
             {/* Intro Section */}
@@ -133,13 +161,53 @@ export default function Main() {
                         <p className="mb-2 text-gray-300">It includes intergrated ai, which scours the web related to any news related to the stock you are tracking, evaluates it and gives you a rating based on the news.</p>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/elementor-placeholder-image.webp"
-                        alt="Project 1"
-                        width={300}
-                        height={200}
-                      />
+                      <div className="relative">
+                        <Image
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          src={aiScreenerImages[aiScreenerImageIndex].src}
+                          alt={aiScreenerImages[aiScreenerImageIndex].alt}
+                          width={300}
+                          height={200}
+                          onClick={() => openModal(aiScreenerImages[aiScreenerImageIndex].src, aiScreenerImages[aiScreenerImageIndex].alt)}
+                          quality={95}
+                        />
+                        {/* Click to expand hint */}
+                        <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs opacity-70">
+                          Click to expand
+                        </div>
+                        {/* Navigation arrows */}
+                        <button
+                          onClick={prevAiScreenerImage}
+                          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors duration-200"
+                          aria-label="Previous image"
+                        >
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                          </svg>
+                        </button>
+                        <button
+                          onClick={nextAiScreenerImage}
+                          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors duration-200"
+                          aria-label="Next image"
+                        >
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                          </svg>
+                        </button>
+                        {/* Image indicators */}
+                        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
+                          {aiScreenerImages.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => setAiScreenerImageIndex(index)}
+                              className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                                index === aiScreenerImageIndex ? 'bg-white' : 'bg-white/50'
+                              }`}
+                              aria-label={`Go to image ${index + 1}`}
+                            />
+                          ))}
+                        </div>
+                      </div>
                     </div>
                 </motion.div>
 
@@ -173,13 +241,20 @@ export default function Main() {
 trains a random Forest model on games before 2020 and tests predictions on games after 2020</p>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/nba-game-predictor.png"
-                        alt="Project 3" 
-                        width={300}
-                        height={200}
-                      />
+                      <div className="relative">
+                        <Image
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          src="/nba-game-predictor.png"
+                          alt="NBA Game Predictor" 
+                          width={300}
+                          height={200}
+                          onClick={() => openModal('/nba-game-predictor.png', 'NBA Game Predictor')}
+                          quality={95}
+                        />
+                        <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs opacity-70">
+                          Click to expand
+                        </div>
+                      </div>
                     </div>
                 </motion.div>
                 {/* Project 3 */}
@@ -213,13 +288,20 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">I worked as the scrum master for this project.</p>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/Mensa-App.png"
-                        alt="Project 1"
-                        width={300}
-                        height={200}
-                      />
+                      <div className="relative">
+                        <Image
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          src="/Mensa-App.png"
+                          alt="Mensa App"
+                          width={300}
+                          height={200}
+                          onClick={() => openModal('/Mensa-App.png', 'Mensa App')}
+                          quality={95}
+                        />
+                        <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs opacity-70">
+                          Click to expand
+                        </div>
+                      </div>
                     </div>
                 </motion.div>
                 {/* Project 4 */}
@@ -252,13 +334,20 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">Implements core banking operations with user authentication and transaction history tracking.</p>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/simple-banking-system.png"
-                        alt="Project 1"
-                        width={300}
-                        height={200}
-                      />
+                      <div className="relative">
+                        <Image
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          src="/simple-banking-system.png"
+                          alt="Simple Banking System"
+                          width={300}
+                          height={200}
+                          onClick={() => openModal('/simple-banking-system.png', 'Simple Banking System')}
+                          quality={95}
+                        />
+                        <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs opacity-70">
+                          Click to expand
+                        </div>
+                      </div>
                     </div>
                 </motion.div>
 
@@ -273,7 +362,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                 >
                     <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
-                            <h2 className="text-xl md:text-2xl">project cyberattacks</h2>
+                            <h2 className="text-xl md:text-2xl">Project-Cyberattacks</h2>
                             <a 
                                 href="https://github.com/aebyl-bzz/projekt_cyberattacks" 
                                 target="_blank" 
@@ -307,13 +396,20 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">It has many responsive features, such as an interactive map, a timeline of the attacks and more.</p>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/cyberattacks_demoImage.png"
-                        alt="Project 2"
-                        width={300}
-                        height={200}
-                      />
+                      <div className="relative">
+                        <Image
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          src="/cyberattacks_demoImage.png"
+                          alt="Cyberattacks Project"
+                          width={300}
+                          height={200}
+                          onClick={() => openModal('/cyberattacks_demoImage.png', 'Cyberattacks Project')}
+                          quality={95}
+                        />
+                        <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs opacity-70">
+                          Click to expand
+                        </div>
+                      </div>
                     </div>
                 </motion.div>
 
@@ -347,17 +443,55 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">Features standard blackjack rules with player vs dealer gameplay and basic betting functionality.</p>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-center items-center h-full">
-                      <Image
-                        className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
-                        src="/black-jack.png"
-                        alt="Project 1"
-                        width={300}
-                        height={200}
-                      />
+                      <div className="relative">
+                        <Image
+                          className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto cursor-pointer"
+                          src="/black-jack.png"
+                          alt="Black Jack Game"
+                          width={300}
+                          height={200}
+                          onClick={() => openModal('/black-jack.png', 'Black Jack Game')}
+                          quality={95}
+                        />
+                        <div className="absolute top-2 right-2 bg-black/50 text-white px-2 py-1 rounded text-xs opacity-70">
+                          Click to expand
+                        </div>
+                      </div>
                     </div>
                 </motion.div>
 
             </div>
+
+            {/* Image Modal */}
+            {isModalOpen && modalImage && (
+              <div 
+                className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+                onClick={closeModal}
+              >
+                <div className="relative max-w-6xl max-h-full">
+                  <Image
+                    src={modalImage.src}
+                    alt={modalImage.alt}
+                    width={1200}
+                    height={800}
+                    className="max-w-full max-h-full object-contain rounded-lg"
+                    quality={100}
+                  />
+                  <button
+                    onClick={closeModal}
+                    className="absolute top-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors duration-200"
+                    aria-label="Close modal"
+                  >
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                  </button>
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-4 py-2 rounded">
+                    {modalImage.alt}
+                  </div>
+                </div>
+              </div>
+            )}
         </div>
     );
 }
