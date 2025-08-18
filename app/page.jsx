@@ -108,9 +108,9 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">AI-Stock-Screener</h2>
                             <a 
@@ -132,7 +132,7 @@ export default function Main() {
                         <p className="mb-2 text-gray-300">A stock screener that allows you to track stocks, gives you suggestions and more.</p>
                         <p className="mb-2 text-gray-300">It includes intergrated ai, which scours the web related to any news related to the stock you are tracking, evaluates it and gives you a rating based on the news.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/elementor-placeholder-image.webp"
@@ -149,9 +149,9 @@ export default function Main() {
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                        className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                        className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">NBA-Game-Predictor</h2>
                             <a 
@@ -172,7 +172,7 @@ export default function Main() {
                         <p className="mb-2 text-gray-300">Loads 65,000+ NBA games,
 trains a random Forest model on games before 2020 and tests predictions on games after 2020</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/nba-game-predictor.png"
@@ -189,9 +189,9 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">Mensa-App</h2>
                             <a 
@@ -212,13 +212,13 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">Web application to manage a school cafeteria menu. Users can register, login, view the menu and pre-order meals. Includes an admin interface for adding, deleting and editing meals.</p>
                         <p className="mb-2 text-gray-300">I worked as the scrum master for this project.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/Mensa-App.png"
                         alt="Project 1"
                         width={300}
-                        height={300}
+                        height={200}
                       />
                     </div>
                 </motion.div>
@@ -229,9 +229,9 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">Simple-Banking-System</h2>
                             <a 
@@ -249,15 +249,15 @@ trains a random Forest model on games before 2020 and tests predictions on games
                             <span className="px-2 py-1 bg-rose-500/20 text-rose-300 rounded-md text-sm">Java</span>
                         </div>
                         <p className="mb-2 text-gray-300">A Java-based banking system simulation that supports creating accounts, depositing and withdrawing money, transferring money and more.</p>
-                        <p className="mb-2 text-gray-300"></p>
+                        <p className="mb-2 text-gray-300">Implements core banking operations with user authentication and transaction history tracking.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/simple-banking-system.png"
                         alt="Project 1"
                         width={300}
-                        height={300}
+                        height={200}
                       />
                     </div>
                 </motion.div>
@@ -269,9 +269,9 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">project cyberattacks</h2>
                             <a 
@@ -281,7 +281,20 @@ trains a random Forest model on games before 2020 and tests predictions on games
                                 className="text-purple-300 hover:text-purple-100 transition-colors"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.30.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a 
+                                href="https://aebyl-bzz.github.io/projekt_cyberattacks/main/index" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-green-300 hover:text-green-100 transition-colors"
+                                title="Live Demo"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15,3 21,3 21,9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
                                 </svg>
                             </a>
                         </div>
@@ -293,7 +306,7 @@ trains a random Forest model on games before 2020 and tests predictions on games
                         <p className="mb-2 text-gray-300">A Webpage about the cyberattacks in Ukraine</p>
                         <p className="mb-2 text-gray-300">It has many responsive features, such as an interactive map, a timeline of the attacks and more.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/cyberattacks_demoImage.png"
@@ -311,9 +324,9 @@ trains a random Forest model on games before 2020 and tests predictions on games
                     whileInView={{x: 0, opacity: 1}}
                     viewport={{once: true}}
                     transition={{duration: 0.8}}
-                    className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl"
+                    className="flex flex-col md:flex-row-reverse items-stretch justify-center gap-6 md:gap-10 p-4 md:p-6 bg-purple-900/30 rounded-xl backdrop-blur-sm mb-8 w-full max-w-4xl h-[400px]"
                 >
-                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center">
+                    <div className="w-full md:w-1/2 flex flex-col text-center md:text-left justify-center h-full">
                         <div className="flex items-center justify-center md:justify-start gap-4 mb-2">
                             <h2 className="text-xl md:text-2xl">Black-Jack</h2>
                             <a 
@@ -331,15 +344,15 @@ trains a random Forest model on games before 2020 and tests predictions on games
                             <span className="px-2 py-1 bg-green-500/20 text-green-300 rounded-md text-sm">Python</span>
                         </div>
                         <p className="mb-2 text-gray-300">This is a very simple Black jack game made with Python. It is played in the console.</p>
-                        <p className="mb-2 text-gray-300"></p>
+                        <p className="mb-2 text-gray-300">Features standard blackjack rules with player vs dealer gameplay and basic betting functionality.</p>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full md:w-1/2 flex justify-center items-center h-full">
                       <Image
                         className="rounded-md hover:scale-105 transition-transform duration-300 w-full md:w-auto"
                         src="/black-jack.png"
                         alt="Project 1"
                         width={300}
-                        height={300}
+                        height={200}
                       />
                     </div>
                 </motion.div>
