@@ -13,7 +13,8 @@ export default function RootLayout({ children }) {
         <head>
             <title>{metadata.title}</title>
             <meta name="description" content={metadata.description} />
-            <link rel="icon" href="/favicon-16x16.png" />
+            <link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+            <link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
         </head>
         <body className="bg-black min-h-screen">
         <Navbar />
