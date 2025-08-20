@@ -7,24 +7,13 @@ export default function Impressum() {
                 <section>
                     <h2 className="text-xl font-semibold mb-4">Angaben gemäß § 5 TMG</h2>
                     <p>Lucius Aeby</p>
-                    <p>Musterstrasse 123</p>
-                    <p>1234 Musterstadt</p>
-                    <p>Schweiz</p>
                 </section>
 
                 <section>
                     <h2 className="text-xl font-semibold mb-4">Kontakt</h2>
-                    <p>Telefon: +41 123 456 789</p>
                     <p>E-Mail: lucius.aeby@icloud.com</p>
                 </section>
 
-                <section>
-                    <h2 className="text-xl font-semibold mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-                    <p>Lucius Aeby</p>
-                    <p>Musterstrasse 123</p>
-                    <p>1234 Musterstadt</p>
-                    <p>Schweiz</p>
-                </section>
 
                 <section>
                     <h2 className="text-xl font-semibold mb-4">Haftungsausschluss</h2>
